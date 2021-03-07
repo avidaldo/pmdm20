@@ -70,10 +70,8 @@ public class Spinner6Activity extends Activity {
                 Toast.makeText(Spinner6Activity.this,
                         "OnClickListener : " +
                                 "\nSpinner 1 : " + String.valueOf(spinner1.getSelectedItem()) +
-                                "\nSpinner 2 : " + String.valueOf(spinner2.getSelectedItem()) +
-                                "\nSpinner 3 : " + String.valueOf(spinner3.getSelectedItem()),
-
-                        Toast.LENGTH_LONG).show();
+                                "\nSpinner 2 : " + String.valueOf(spinner2.getSelectedItem()),
+                        Toast.LENGTH_SHORT).show();
             }
 
         });

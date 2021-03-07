@@ -20,12 +20,8 @@ public class Spinner4Activity extends AppCompatActivity {
         final Spinner spinner = findViewById(R.id.spinner);
 
         // Creando el adaptador desde un recurso
-        /*spinner.setAdapter(ArrayAdapter.createFromResource(this,
-                R.array.planetas, R.layout.chachi_spinner_item));*/
-
         spinner.setAdapter(ArrayAdapter.createFromResource(this,
-                R.array.planetas, R.layout.chachi_spinner_item));
-
+                R.array.planetas, android.R.layout.simple_spinner_item));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

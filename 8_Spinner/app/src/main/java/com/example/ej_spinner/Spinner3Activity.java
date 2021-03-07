@@ -21,7 +21,7 @@ public class Spinner3Activity extends AppCompatActivity {
         // El ArrayAdapter es el adaptador que general el listado de elementos a partir del array
         ArrayAdapter arrayAdapter = new ArrayAdapter<>(this,
                 /* El segundo parámetro es el recurso con el diseño del elemento seleccionado */
-               /* android.R.layout.simple_spinner_item,*/ R.layout.chachi2_spinner_item,
+                android.R.layout.simple_spinner_item, // R.layout.chachi_spinner_item,
                 /* El último parámetro pasa el listado de los elemento a adaptar, en este caso en un array de Strings */
                 new String[] {"Mercurio", "Venus", "Tierra", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno"} ) ;
 

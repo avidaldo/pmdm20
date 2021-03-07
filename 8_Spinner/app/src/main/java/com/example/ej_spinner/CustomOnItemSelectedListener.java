@@ -28,7 +28,7 @@ public class CustomOnItemSelectedListener implements OnItemSelectedListener {
                 "OnItemSelectedListener:\n"
                         + adapterView.getItemAtPosition(posicion).toString()
                         + "\n" + ((TextView) view).getText().toString(), // Dos modos de hacer lo mismo
-        Toast.LENGTH_LONG).show();
+        Toast.LENGTH_SHORT).show();
 
     }
 

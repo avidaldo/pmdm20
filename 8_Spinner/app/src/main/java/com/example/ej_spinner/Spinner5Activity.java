@@ -31,7 +31,7 @@ public class Spinner5Activity extends AppCompatActivity {
         planetas.add("Neptuno");
 
         spinner.setAdapter(new ArrayAdapter<>(this,
-                /*android.*/R.layout.chachi2_spinner_item/*simple_spinner_item*/,
+                android.R.layout.simple_spinner_item,
                 planetas));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
