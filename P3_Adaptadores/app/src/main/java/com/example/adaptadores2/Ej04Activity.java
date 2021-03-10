@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.view.View;
+import android.webkit.URLUtil;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -17,6 +18,11 @@ import java.time.LocalTime;
 import java.time.format.DateTimeParseException;
 
 public class Ej04Activity extends AppCompatActivity {
+
+    private static final String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." +
+            "[a-zA-Z0-9_+&*-]+)*@" +
+            "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+            "A-Z]{2,7}$";
 
     EditText etValor05;
 
@@ -47,19 +53,37 @@ public class Ej04Activity extends AppCompatActivity {
     private void intentNumero(int i) {
         Intent intent = new Intent();
 
+        String datos = etValor05.getText().toString();
+
         switch (i) {
-            case 0: return;
+            case 0:
+                return;
             case 1:
+                if (!datos.matches("\\s*")) {
+                    try {
+                        int tel = Integer.parseInt(datos);
+                    } catch (NumberFormatException nfe) {
+                        Toast.makeText(getApplicationContext(), getResources().getString(R.string.valor_erroneo), Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                }
                 intent.setAction(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:" + etValor05.getText().toString()));
+                intent.setData(Uri.parse("tel:" +));
+
                 break;
             case 2:
                 intent.setAction(Intent.ACTION_SENDTO);
-                intent.setData(Uri.parse("smsto:" + etValor05.getText().toString()));
+                intent.setData(Uri.parse("smsto:" + datos));
                 break;
             case 3:
                 intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://" + etValor05.getText().toString()));
+                if (URLUtil.isValidUrl(datos)) {
+                    intent.setData(Uri.parse(datos));
+                } else if (datos.contains(".")) {
+                    intent.setData(Uri.parse("https://" + datos));
+                } else {
+                    intent.setData(Uri.parse("https://google.es/search?q=" + datos));
+                }
                 break;
             case 4:
                 intent.setAction(Intent.ACTION_VIEW);
@@ -67,18 +91,21 @@ public class Ej04Activity extends AppCompatActivity {
                 break;
             case 5:
                 try {
-                    LocalTime time = LocalTime.parse(etValor05.getText().toString());
+                    LocalTime time = LocalTime.parse(datos);
                     intent.setAction(AlarmClock.ACTION_SET_ALARM);
                     intent.putExtra(AlarmClock.EXTRA_HOUR, time.getHour());
                     intent.putExtra(AlarmClock.EXTRA_MINUTES, time.getMinute());
                 } catch (DateTimeParseException e) {
                     Toast.makeText(this, "El formato del input no es válido. Debe ser: \"HH:MM\"", Toast.LENGTH_SHORT).show();
-                    return;
                 }
                 break;
             case 6:
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("mailto:" + etValor05.getText().toString()));
+                if (!datos.matches(emailRegex)) {
+                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.valor_erroneo), Toast.LENGTH_SHORT).show();
+                } else {
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse("mailto:" + etValor05.getText().toString()));
+                }
                 break;
             case 7:
                 intent.setAction("android.media.action.IMAGE_CAPTURE");

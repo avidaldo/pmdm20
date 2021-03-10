@@ -2,6 +2,7 @@ package com.example.a7_p2_eventos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -62,22 +63,27 @@ public class Ej042ResultSecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Ej042ResultSecondActivity.this, Ej04Activity.class);
+                Intent intent = new Intent();
 
                 int checkedDespedida = rgDespedida.getCheckedRadioButtonId();
 
 
                 if (!cbDespedida.isChecked()) {
-                    startActivity(intent);
+                    setResult(Activity.RESULT_CANCELED);
+                    finish();
                 } else {
                     if (checkedDespedida == -1) {
                         Toast.makeText(Ej042ResultSecondActivity.this, "Debe introducir una despedida", Toast.LENGTH_SHORT).show();
-                        return;
+
                     } else {
-                        startActivity(intent.putExtra(DESPEDIDA,
+
+                        String despedida =
                                 ((RadioButton) findViewById(checkedDespedida)).getText().toString()
-                                        + ", " + nombre + ".")
-                        );
+                                + ", " + nombre + ".";
+
+
+                        setResult(Activity.RESULT_OK, intent.putExtra(DESPEDIDA, despedida));
+                        finish();
                     }
 
                 }

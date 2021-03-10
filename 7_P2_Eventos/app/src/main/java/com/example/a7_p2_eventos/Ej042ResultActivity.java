@@ -61,10 +61,8 @@ public class Ej042ResultActivity extends AppCompatActivity {
 
         // Comprobamos si el requestCode es el solicitado
         if ((resultCode == RESULT_OK) && (requestCode == REQUEST_CODE)) {
-            Toast.makeText(this, data.getStringExtra("MESSAGE"),
+            Toast.makeText(this, data.getStringExtra(DESPEDIDA),
                     Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Resultado incorrecto", Toast.LENGTH_SHORT).show();
         }
     }
 

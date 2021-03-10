@@ -40,15 +40,17 @@ public class Ej04Activity extends AppCompatActivity {
             public void onClick(View v) {
                 String cadena;
                 int checkedSrSra = rgSrSra.getCheckedRadioButtonId();
+                String nombre = etNombre04.getText().toString();
 
-                if (etNombre04.getText().length() == 0) {
-                    Toast.makeText(Ej04Activity.this, "ERROR: Debe introducir un nombre.", Toast.LENGTH_SHORT).show();
+                if (nombre.length() == 0) {
+                    Toast.makeText(Ej04Activity.this, R.string.error_nombre, Toast.LENGTH_SHORT).show();
                 } else if (checkedSrSra == -1) {
                     Toast.makeText(Ej04Activity.this, "ERROR: Debe elegir un tratamiento.", Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intent = new Intent(Ej04Activity.this, Ej04SecondActivity.class);
-                    intent.putExtra(NOMBRE, etNombre04.getText().toString());
-                    intent.putExtra(TRATAMIENTO, ((RadioButton) findViewById(rgSrSra.getCheckedRadioButtonId())).getText().toString());
+                    intent.putExtra(NOMBRE, nombre);
+                    intent.putExtra(TRATAMIENTO,
+                            ((RadioButton) findViewById(checkedSrSra)).getText().toString());
                     startActivity(intent);
 
                 }

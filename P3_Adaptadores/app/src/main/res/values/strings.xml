@@ -4,4 +4,5 @@
     <string name="provincia">Provincia</string>
     <string name="localidade">Localidade</string>
     <string name="no_app_error">App no encontrada</string>
+    <string name="valor_erroneo">Valor erroneo</string>
 </resources>

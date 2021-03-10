@@ -30,7 +30,7 @@ public class Ej01Activity extends AppCompatActivity {
 
     public void anadir(View view) {
         String fruta = ((EditText)findViewById(R.id.et01)).getText().toString();
-        if (!fruta.isEmpty()) { // Comprobamos que el EditText no está vacío.
+        if (!fruta.matches("\\s*")) { // Comprobamos que el EditText no está vacío.
             frutas.add(fruta);
         } // Si lo está, simplemente no añadimos nada.
         ((EditText)findViewById(R.id.et01)).getText().clear();

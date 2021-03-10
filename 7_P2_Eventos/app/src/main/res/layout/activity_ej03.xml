@@ -59,7 +59,7 @@
         android:id="@+id/etValor03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="5"
         android:hint="Valor"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/button03"

@@ -3,6 +3,9 @@ package com.example.a7_p2_eventos;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.text.method.DigitsKeyListener;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -41,7 +44,6 @@ public class Ej03Activity extends AppCompatActivity {
 
     public void click03(View view) {
 
-
         try {
             double valor = Double.parseDouble(etValor03.getText().toString());
 
@@ -54,10 +56,12 @@ public class Ej03Activity extends AppCompatActivity {
 
             if (rgConversion.getCheckedRadioButtonId() == R.id.rbDolEur) {
                 valorConvertido = valor * EUR_POR_DOLLAR;
-                tvConversion.setText(valor + " $ equivalen a " + decimalFormat.format(valorConvertido) + " €");
+                tvConversion.setText(decimalFormat.format(valor) + " $ equivalen a " +
+                        decimalFormat.format(valorConvertido) + " €");
             } else if (rgConversion.getCheckedRadioButtonId() == R.id.rbEurDol) {
                 valorConvertido = valor / EUR_POR_DOLLAR;
-                tvConversion.setText(valor + " .55€ equivalen a " + decimalFormat.format(valorConvertido) + " $");
+                tvConversion.setText(decimalFormat.format(valor) + " € equivalen a " +
+                        decimalFormat.format(valorConvertido) + " $");
             } else {
                 tvConversion.setText("Debe seleccionar una conversión");
             }
