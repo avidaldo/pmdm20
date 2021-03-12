@@ -55,7 +55,9 @@ public class Ej03Activity extends AppCompatActivity {
         spinnerCidades.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Ej03Activity.this, "Provincia: " + spinnerProvincias.getSelectedItem() + "\nLocalidade: " + spinnerCidades.getSelectedItem(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Ej03Activity.this,
+                        "Provincia: " + spinnerProvincias.getSelectedItem()
+                                + "\nLocalidade: " + view.toString(), Toast.LENGTH_SHORT).show();
             }
 
             @Override

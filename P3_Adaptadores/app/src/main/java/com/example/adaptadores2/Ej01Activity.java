@@ -47,7 +47,7 @@ public class Ej01Activity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Ej01Activity.this, "Fruta: " + spinner.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(Ej01Activity.this, "Fruta: " + parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
             }
 
             @Override

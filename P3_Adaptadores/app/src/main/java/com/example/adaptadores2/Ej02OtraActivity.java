@@ -23,14 +23,14 @@ public class Ej02OtraActivity extends AppCompatActivity {
 
         ArrayList<String> frutas = getIntent().getExtras().getStringArrayList(MENSAJE_FRUTAS);
 
-        final Spinner spinner = findViewById(R.id.spinner);
+        final Spinner spinner = findViewById(R.id.spinner2);
 
         spinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, frutas));
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(Ej02OtraActivity.this,
-                        "Fruta: " + spinner.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+                        "Fruta: " + parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
             }
 
             @Override

@@ -22,10 +22,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Provincia"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerProvincias"
         app:layout_constraintEnd_toStartOf="@+id/spinnerProvincias"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/spinnerProvincias" />
 
@@ -34,10 +34,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Localidade"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerCidades"
         app:layout_constraintEnd_toStartOf="@+id/spinnerCidades"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/spinnerCidades" />
 
@@ -45,12 +45,12 @@
         android:id="@+id/spinnerProvincias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
         android:entries="@array/provincias_galicia"
         android:paddingTop="25dp"
         android:paddingBottom="25dp"
         app:layout_constraintBottom_toTopOf="@+id/spinnerCidades"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -58,9 +58,9 @@
         android:id="@+id/spinnerCidades"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/spinnerProvincias" />
 </androidx.constraintlayout.widget.ConstraintLayout>

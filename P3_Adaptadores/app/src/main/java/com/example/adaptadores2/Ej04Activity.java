@@ -38,8 +38,8 @@ public class Ej04Activity extends AppCompatActivity {
         // Añadiendo el escuchador mediante clase anónima
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                intentNumero(i);
+            public void onItemSelected(AdapterView<?> adapterView, View view, int posicion, long l) {
+                intentNumero(posicion);
             }
 
             @Override
@@ -59,17 +59,19 @@ public class Ej04Activity extends AppCompatActivity {
             case 0:
                 return;
             case 1:
+                Integer tel=null;
                 if (!datos.matches("\\s*")) {
                     try {
-                        int tel = Integer.parseInt(datos);
+                        Integer.parseInt(datos);
                     } catch (NumberFormatException nfe) {
                         Toast.makeText(getApplicationContext(), getResources().getString(R.string.valor_erroneo), Toast.LENGTH_SHORT).show();
                         return;
                     }
                 }
                 intent.setAction(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:" +));
-
+                if (tel!=null) {
+                    intent.setData(Uri.parse("tel:" + tel));
+                }
                 break;
             case 2:
                 intent.setAction(Intent.ACTION_SENDTO);

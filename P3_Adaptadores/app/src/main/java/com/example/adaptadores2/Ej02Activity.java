@@ -13,12 +13,13 @@ public class Ej02Activity extends AppCompatActivity {
 
     static final String MENSAJE_FRUTAS = "frutas";
 
-    private final ArrayList<String> frutas = new ArrayList<>();
+    private ArrayList<String> frutas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ej02);
+        frutas = new ArrayList<>();
     }
 
     public void anadir(View view) {
