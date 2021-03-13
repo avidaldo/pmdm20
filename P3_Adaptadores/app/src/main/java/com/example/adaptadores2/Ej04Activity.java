@@ -99,6 +99,7 @@ public class Ej04Activity extends AppCompatActivity {
                     intent.putExtra(AlarmClock.EXTRA_MINUTES, time.getMinute());
                 } catch (DateTimeParseException e) {
                     Toast.makeText(this, "El formato del input no es válido. Debe ser: \"HH:MM\"", Toast.LENGTH_SHORT).show();
+                    return;
                 }
                 break;
             case 6:
