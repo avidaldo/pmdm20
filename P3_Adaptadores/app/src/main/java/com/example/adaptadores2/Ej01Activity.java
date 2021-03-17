@@ -33,6 +33,11 @@ public class Ej01Activity extends AppCompatActivity {
         if (!fruta.matches("\\s*")) { // Comprobamos que el EditText no está vacío.
             frutas.add(fruta);
         } // Si lo está, simplemente no añadimos nada.
+
+        else {
+            Toast.makeText(Ej01Activity.this, "Nada que añadir", Toast.LENGTH_SHORT).show();
+        }
+
         ((EditText)findViewById(R.id.et01)).getText().clear();
     }
 

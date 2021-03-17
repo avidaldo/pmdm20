@@ -41,19 +41,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_DIAL);
         intent.setData(Uri.parse("tel:886120464"));
 
-        if (intent.resolveActivity(getPackageManager()) != null) {
+ /*       if (intent.resolveActivity(getPackageManager()) != null) {
             Log.e("prueba", "if");
             startActivity(intent);
         } else {
             Log.e("prueba", "else");
             Toast.makeText(this, R.string.no_app_error, Toast.LENGTH_SHORT).show();
-        }
+        }*/
 
-        /* try {
+         try {
             startActivity(intent);
         } catch (ActivityNotFoundException e) {
             Toast.makeText(this, R.string.no_app_error, Toast.LENGTH_SHORT).show();
-        }*/
+        }
     }
 
 
