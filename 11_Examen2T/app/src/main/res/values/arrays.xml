@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="subgeneros_rock">
+        <item>Hard Rock</item>
+        <item>Grunge</item>
+        <item>Psicodelia</item>
+        <item>Punk</item>
+    </string-array>
+    <string-array name="subgeneros_metal">
+        <item>Heavy Metal</item>
+        <item>Thrash Metal</item>
+        <item>Death Metal</item>
+        <item>Black Metal</item>
+        <item>Chandal</item>
+    </string-array>
+    <string-array name="albums_base">
+        <item>Añadir álbum...</item>
+    </string-array>
+</resources>

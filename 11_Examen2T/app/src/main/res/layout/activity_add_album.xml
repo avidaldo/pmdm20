@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondo"
+    android:padding="@dimen/basic_padding"
+    tools:context=".AddAlbumActivity">
+
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/block_height"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:padding="@dimen/separacion"
+        android:text="@string/titulo"
+        app:layout_constraintBottom_toBottomOf="@+id/et_titulo"
+        app:layout_constraintEnd_toStartOf="@+id/et_titulo"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_titulo" />
+
+    <EditText
+        android:id="@+id/et_titulo"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/block_height"
+        android:background="@color/grey"
+        android:ems="10"
+        android:hint="@string/teclea_titulo"
+        android:importantForAutofill="no"
+
+        android:inputType="textPersonName"
+        android:padding="@dimen/separacion"
+        app:layout_constraintBottom_toTopOf="@+id/et_autor"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@+id/tv_titulo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_autor"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/block_height"
+        android:height="@dimen/block_height"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:padding="@dimen/separacion"
+        android:text="@string/autor"
+        app:layout_constraintBottom_toBottomOf="@+id/et_autor"
+        app:layout_constraintEnd_toEndOf="@+id/tv_titulo"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_autor" />
+
+    <EditText
+        android:id="@+id/et_autor"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/block_height"
+        android:background="@color/grey"
+        android:ems="10"
+        android:hint="@string/teclea_autor"
+        android:importantForAutofill="no"
+
+        android:inputType="textPersonName"
+        android:padding="@dimen/separacion"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@+id/tv_autor"
+        app:layout_constraintTop_toBottomOf="@+id/et_titulo" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/block2_height"
+
+        android:background="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/et_autor" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tema"
+        app:layout_constraintBottom_toTopOf="@+id/rg_genero"
+        app:layout_constraintEnd_toEndOf="@+id/rg_genero"
+        app:layout_constraintStart_toStartOf="@+id/rg_genero"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <RadioGroup
+        android:id="@+id/rg_genero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view">
+
+        <RadioButton
+            android:id="@+id/rb_rock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/separacion"
+            android:text="@string/tecnico" />
+
+        <RadioButton
+            android:id="@+id/rb_metal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/separacion"
+            android:text="@string/lectura" />
+    </RadioGroup>
+
+
+    <Spinner
+        android:id="@+id/spinner_subgeneros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/separacion"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view">
+
+    </Spinner>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addAlbum"
+        android:text="@string/aceptar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@id/view" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        android:onClick="buscarAlbum"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

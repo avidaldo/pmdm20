@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Examen2T</string>
+    <string name="titulo">Álbum</string>
+    <string name="teclea_titulo">Título del álbum</string>
+    <string name="autor">Artista</string>
+    <string name="teclea_autor">Banda o artista </string>
+    <string name="tema">Género</string>
+    <string name="tecnico">Rock</string>
+    <string name="lectura">Metal</string>
+    <string name="traducido_a">Traducido a:</string>
+    <string name="frances">Francés</string>
+    <string name="ingles">Inglés</string>
+    <string name="aceptar">Añadir</string>
+    <string name="error_noAlbum">Debe introducir el nombre del álbum</string>
+    <string name="error_noArtista">Debe introducir un nombre de artista</string>
+    <string name="error_noGenero">Debe elegir un género</string>
+    <string name="no_app_error">App no encontrada</string>
+    <string name="error_noAlbumArtista">Debe introducir algún dato para buscar</string>
+</resources>

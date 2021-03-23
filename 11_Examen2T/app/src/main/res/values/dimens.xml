@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="basic_padding">50dp</dimen>
+    <dimen name="block_height">70dp</dimen>
+    <dimen name="separacion">12dp</dimen>
+    <dimen name="block2_height">140dp</dimen>
+</resources>
