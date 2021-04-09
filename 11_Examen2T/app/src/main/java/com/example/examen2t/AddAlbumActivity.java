@@ -41,8 +41,12 @@ public class AddAlbumActivity extends AppCompatActivity {
                     elementos = R.array.subgeneros_metal;
                 }
 
-                ArrayAdapter adapter = ArrayAdapter.createFromResource(AddAlbumActivity.this, elementos, R.layout.item_guay);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                ArrayAdapter adapter =
+                        ArrayAdapter.createFromResource(AddAlbumActivity.this, elementos,
+                                //android.R.layout.simple_spinner_item);
+                                //R.layout.item_guay2);
+                                R.layout.item_guay); // TextView personalizado para el elemento seleccionado
+                adapter.setDropDownViewResource(R.layout.item_guay2);
                 spinner.setAdapter(adapter);
 
                 spinner.setVisibility(View.VISIBLE);

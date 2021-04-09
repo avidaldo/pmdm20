@@ -17,7 +17,7 @@ public class Spinner4Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spinner4);
 
-        final Spinner spinner = findViewById(R.id.spinner);
+        final Spinner spinner = findViewById(R.id.spinner4);
 
         // Creando el adaptador desde un recurso
         spinner.setAdapter(ArrayAdapter.createFromResource(this,

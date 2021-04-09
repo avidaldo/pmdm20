@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Spinner5Activity extends AppCompatActivity {
     List<String> planetas;
@@ -20,7 +23,7 @@ public class Spinner5Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spinner5);
-        final Spinner spinner = findViewById(R.id.spinner);
+        Spinner spinner = (Spinner) findViewById(R.id.spinner5);
 
         List<String> planetas = new ArrayList<>();
         planetas.add("Mercurio");
@@ -32,10 +35,11 @@ public class Spinner5Activity extends AppCompatActivity {
         planetas.add("Urano");
         planetas.add("Neptuno");
 
-
-        spinner.setAdapter(new ArrayAdapter<>(this,
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item,
-                planetas));
+                planetas);
+
+        spinner.setAdapter(adapter);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 

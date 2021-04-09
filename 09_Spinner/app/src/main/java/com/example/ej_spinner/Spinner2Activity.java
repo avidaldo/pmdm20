@@ -16,7 +16,7 @@ public class Spinner2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spinner2);
 
-        final Spinner spinner = findViewById(R.id.spinner);
+        final Spinner spinner = findViewById(R.id.spinner2);
 
         /* Seteamos un escuchador para el evento de cambio de evento seleccionado
         en el spinner. */
