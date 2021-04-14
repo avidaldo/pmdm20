@@ -34,23 +34,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, Ej042ResultActivity.class));
     }
 
+    public void toEj06(View view) {
+        startActivity(new Intent(this, Ej06Activity.class));
+    }
 
-/*
-    public void toEj07(View view) {
-        startActivity(new Intent(this, Ej07Activity.class));
-    }
-    public void toEj08(View view) {
-        startActivity(new Intent(this, Ej08Activity.class));
-    }
-    public void toEj09(View view) {
-        startActivity(new Intent(this, Ej09Activity.class));
-    }
-    public void toEj10(View view) {
-        startActivity(new Intent(this, Ej10Activity.class));
-    }
-    public void toEj11(View view) {
-        startActivity(new Intent(this, Ej11Activity.class));
-    }*/
 
 
 }

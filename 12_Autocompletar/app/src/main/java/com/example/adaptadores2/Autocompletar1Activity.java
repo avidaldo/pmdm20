@@ -9,13 +9,17 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Autocompletar1Activity extends AppCompatActivity {
 
     AutoCompleteTextView autoCompleteTextView;
 
-    // Array de palabras que puede elegir el Usuario
-    // Podría leerse de un recurso
-    private String [] arrayAutocompletado = {"Abel","Ana","Anacleto","Anastasio","Anastasia","Anibal","Antonio"};
+    // Array y ArrayList de palabras que puede elegir el Usuario, ejemplificando el caso de que fuesen cargadas dinámicamente
+    private static final String[] arrayAutocompletado = {"Abel","Ana","Anacleto","Anastasio","Anastasia","Anibal","Antonio"};
+    private static final List<String> arrayNombres = new ArrayList<String>(Arrays.asList(arrayAutocompletado));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,15 +28,24 @@ public class Autocompletar1Activity extends AppCompatActivity {
 
         autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
 
-        //ArrayAdapter<String> adaptador = ArrayAdapter.createFromResource(this, R.array.nombres, android.R.layout.simple_spinner_dropdown_item));
-        //ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, arrayAutocompletado);
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.select_dialog_item, getResources().getStringArray(R.array.nombres));
+        // Cargando desde el Array
+        //ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this, android.R.layout.select_dialog_item, arrayAutocompletado);
+        // O cargando desde el Array
+        //ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, arrayNombres);
 
-        // Para que el Autocompletado empiece a dar sugerencias desde la primera palabra que se introduzca
+        // Si el array de elementos no se va a generar dinámicamente, tiene más sentido leerlo de un recurso
+        //ArrayAdapter<CharSequence> adapter = new ArrayAdapter<CharSequence>(this, android.R.layout.select_dialog_item, getResources().getStringArray(R.array.nombres));
+
+        // Para lo cual, mejor, existe un método específico:
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.nombres, android.R.layout.select_dialog_item);
+
+        // Para que el Autocompletado empiece a dar sugerencias desde la primera letra que se introduzca
         autoCompleteTextView.setThreshold(1);
+
         // Añadimos el Adaptador al autoCompleteTextView
-        autoCompleteTextView.setAdapter(adaptador);
-        // Listener del Autocompletado
+        autoCompleteTextView.setAdapter(adapter);
+
+        // Listener sobre la elección de una de las opciones
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
