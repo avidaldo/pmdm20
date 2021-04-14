@@ -18,8 +18,8 @@ public class Autocompletar1Activity extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTextView;
 
     // Array y ArrayList de palabras que puede elegir el Usuario, ejemplificando el caso de que fuesen cargadas dinámicamente
-    private static final String[] arrayAutocompletado = {"Abel","Ana","Anacleto","Anastasio","Anastasia","Anibal","Antonio"};
-    private static final List<String> arrayNombres = new ArrayList<String>(Arrays.asList(arrayAutocompletado));
+    //private static final String[] arrayAutocompletado = {"Abel","Ana","Anacleto","Anastasio","Anastasia","Anibal","Antonio"};
+    //private static final List<String> arrayNombres = new ArrayList<String>(Arrays.asList(arrayAutocompletado));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
