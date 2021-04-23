@@ -14,4 +14,6 @@
     <string name="vale">Has aceptado</string>
     <string name="cancel">¡No!</string>
     <string name="cancelado">Has cancelado</string>
+    <string name="ok">Ok</string>
+    <string name="pick_toppings">Selecciona ingredientes</string>
 </resources>

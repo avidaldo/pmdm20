@@ -29,7 +29,7 @@ public class PickersActivity extends AppCompatActivity {
     }
 
 
-    public void showDatePickerDialog(View view) {
+ /*   public void showDatePickerDialog(View view) {
         DialogFragment newFragment = new DatePickerFragment();
         newFragment.show(getSupportFragmentManager(), "timePicker");
     }
@@ -53,5 +53,5 @@ public class PickersActivity extends AppCompatActivity {
         public void onDateSet(DatePicker view, int year, int month, int day) {
             // Do something with the date chosen by the user
         }
-    }
+    }*/
 }

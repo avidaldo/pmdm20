@@ -48,7 +48,6 @@ public class Ej1Activity extends AppCompatActivity implements CompoundButton.OnC
             alertDialogBuilder.setOnCancelListener(new DialogInterface.OnCancelListener() {
                 @Override
                 public void onCancel(DialogInterface dialog) {
-
                     interruptor.setChecked(true);
                 }
             });
