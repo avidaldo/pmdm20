@@ -31,6 +31,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toPickersActivity(View view) {
-        startActivity(new Intent(this, PickersActivity.class));
+        startActivity(new Intent(this, SimplePickersActivity.class));
     }
 }

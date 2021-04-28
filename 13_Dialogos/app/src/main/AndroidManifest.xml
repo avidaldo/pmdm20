@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DialogosMenus">
-        <activity android:name=".ListDialogActivity"></activity>
+        <activity android:name=".SimplePickersActivity"></activity>
+        <activity android:name=".ListDialogActivity" />
         <activity android:name=".DialogFramentActivity" />
         <activity android:name=".BasicDialogsActivity" />
         <activity android:name=".PickersActivity" />

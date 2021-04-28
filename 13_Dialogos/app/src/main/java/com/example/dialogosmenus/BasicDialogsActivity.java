@@ -13,7 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class BasicDialogsActivity extends AppCompatActivity {
 
@@ -92,28 +94,52 @@ public class BasicDialogsActivity extends AppCompatActivity {
         builder.show();
     }
 
+    public void listDialog2(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Seleccionar")
+                .setSingleChoiceItems(R.array.colors_array, -1, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(BasicDialogsActivity.this,
+                                "Estás seleccionando: " +
+                                getResources().getStringArray(R.array.colors_array)[which],
+                                Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(BasicDialogsActivity.this,
+                                "Has seleccionado: " +
+                                getResources().getStringArray(R.array.colors_array)[which],
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+        builder.show();
+    }
+
     public void multipleSelectionDialog(View view) {
-        List<Integer> selectedItems = new ArrayList();
+        String[] stringArray = getResources().getStringArray(R.array.lenguajes);
+        boolean[] isCheckedList = {true, false, true};
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.pick_toppings)
-                .setMultiChoiceItems(R.array.toppings, null,
+                .setMultiChoiceItems(stringArray, isCheckedList,
                         new DialogInterface.OnMultiChoiceClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which,
                                                 boolean isChecked) {
-                                if (isChecked) { // Si se marca un elemento
-                                    selectedItems.add(which); // Añadimos su posición al ArrayList
-                                } else if (selectedItems.contains(which)) { // si se desmarca
-                                    selectedItems.remove(Integer.valueOf(which)); // lo eliminamos
-                                }
+                                isCheckedList[which] = isChecked;
                             }
                         })
                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
                         String mensaje = "Los ingredientes seleccionados son:";
-                        for (Integer indice : selectedItems) {
-                            mensaje += " " + getResources().getStringArray(R.array.toppings)[indice];
+                        for (int i = 0; i < stringArray.length; i++) {
+                            if  (isCheckedList[i]) {
+                                mensaje += " " + getResources().getStringArray(R.array.lenguajes)[i];
+                            }
                         }
                         Toast.makeText(BasicDialogsActivity.this, mensaje, Toast.LENGTH_SHORT).show();
                     }

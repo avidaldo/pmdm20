@@ -10,4 +10,9 @@
         <item>lechuga</item>
         <item>tomate</item>
     </string-array>
+    <string-array name="lenguajes">
+        <item>Java</item>
+        <item>Swift</item>
+        <item>Kotlin</item>
+    </string-array>
 </resources>
