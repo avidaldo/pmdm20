@@ -11,6 +11,9 @@ import android.widget.Button;
 
 public class Ej2FragmentsDinamicosActivity extends AppCompatActivity {
 
+    private Fragment fragment, redFragment, blueFragment;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,13 +21,27 @@ public class Ej2FragmentsDinamicosActivity extends AppCompatActivity {
 
         Button boton = findViewById(R.id.btnChangeFragment2);
 
+        redFragment = new RedFragment();
+        blueFragment = new BlueFragment();
+
+        // Se carga primero el fragment rojo
+        fragment = redFragment;
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.contenedor2, fragment)
+                .commit();
+
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (fragment == redFragment)
+                    fragment = blueFragment;
+                else {
+                    fragment = redFragment;
+                }
 
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.contenedor2, new RedFragment())
+                        .replace(R.id.contenedor2, fragment)
                         .commit();
 
 
@@ -32,13 +49,7 @@ public class Ej2FragmentsDinamicosActivity extends AppCompatActivity {
         });
 
 
-
-
-
-
     }
-
-
 
 
 }
