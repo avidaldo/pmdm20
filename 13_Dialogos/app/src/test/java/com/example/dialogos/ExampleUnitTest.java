@@ -1,4 +1,4 @@
-package com.example.dialogosmenus;
+package com.example.dialogos;
 
 import org.junit.Test;
 

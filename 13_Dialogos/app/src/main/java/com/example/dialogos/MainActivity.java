@@ -1,14 +1,14 @@
-package com.example.dialogosmenus;
+package com.example.dialogos;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+
+import com.example.dialogos.basicdialogs.BasicDialogsActivity;
+import com.example.dialogos.fragmentdialog.DialogFramentActivity;
+import com.example.dialogos.simplepickers.SimplePickersActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,9 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /*
-    https://developer.android.com/guide/topics/ui/dialogs
-     */
+    /* https://developer.android.com/guide/topics/ui/dialogs */
 
     public void toBasicDialogsActivity(View view) {
         startActivity(new Intent(this, BasicDialogsActivity.class));

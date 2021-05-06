@@ -20,7 +20,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AlerDialogs actuales"
+        android:text="AlerDialogs con fragments"
         android:onClick="toDialogFramentActivity"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintStart_toStartOf="@+id/button"

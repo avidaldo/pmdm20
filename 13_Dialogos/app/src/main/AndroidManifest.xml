@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dialogosmenus">
+    package="com.example.dialogos">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
@@ -11,13 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DialogosMenus">
-        <activity android:name=".SimplePickersActivity"></activity>
-        <activity android:name=".ListDialogActivity" />
-        <activity android:name=".DialogFramentActivity" />
-        <activity android:name=".BasicDialogsActivity" />
-        <activity android:name=".PickersActivity" />
-        <activity android:name=".Ej1Activity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.dialogos.simplepickers.SimplePickersActivity"></activity>
+        <activity android:name="com.example.dialogos.fragmentdialog.DialogFramentActivity" />
+        <activity android:name="com.example.dialogos.basicdialogs.BasicDialogsActivity" />
+        <activity android:name="com.example.dialogos.PickersActivity" />
+        <activity android:name="com.example.dialogos.basicdialogs.Ej1Activity" />
+        <activity android:name="com.example.dialogos.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

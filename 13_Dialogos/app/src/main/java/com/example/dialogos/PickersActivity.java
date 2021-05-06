@@ -1,17 +1,10 @@
-package com.example.dialogosmenus;
+package com.example.dialogos;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
-import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.app.TimePickerDialog;
-import android.icu.util.Calendar;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.view.View;
-import android.widget.TimePicker;
-import android.widget.Toast;
 
 //https://developer.android.com/guide/topics/ui/controls/pickers
 

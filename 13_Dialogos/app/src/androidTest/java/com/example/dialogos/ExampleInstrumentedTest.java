@@ -1,4 +1,4 @@
-package com.example.dialogosmenus;
+package com.example.dialogos;
 
 import android.content.Context;
 

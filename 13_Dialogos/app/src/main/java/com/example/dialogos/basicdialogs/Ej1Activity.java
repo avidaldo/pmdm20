@@ -1,4 +1,4 @@
-package com.example.dialogosmenus;
+package com.example.dialogos.basicdialogs;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,13 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
-import com.google.android.material.switchmaterial.SwitchMaterial;
+import com.example.dialogos.R;
 
 
 public class Ej1Activity extends AppCompatActivity {

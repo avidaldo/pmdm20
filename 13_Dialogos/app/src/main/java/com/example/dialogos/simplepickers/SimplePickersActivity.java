@@ -1,4 +1,4 @@
-package com.example.dialogosmenus;
+package com.example.dialogos.simplepickers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -16,6 +16,10 @@ import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import com.example.dialogos.R;
+
+//https://developer.android.com/guide/topics/ui/controls/pickers
 
 public class SimplePickersActivity extends AppCompatActivity {
 

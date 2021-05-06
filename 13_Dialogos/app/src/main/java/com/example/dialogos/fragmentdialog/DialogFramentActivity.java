@@ -1,4 +1,4 @@
-package com.example.dialogosmenus;
+package com.example.dialogos.fragmentdialog;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
+
+import com.example.dialogos.R;
 
 public class DialogFramentActivity extends AppCompatActivity {
 

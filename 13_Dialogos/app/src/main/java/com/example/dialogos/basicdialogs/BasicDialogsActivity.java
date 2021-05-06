@@ -1,4 +1,4 @@
-package com.example.dialogosmenus;
+package com.example.dialogos.basicdialogs;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,10 +12,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.example.dialogos.R;
 
 public class BasicDialogsActivity extends AppCompatActivity {
 
@@ -73,7 +70,8 @@ public class BasicDialogsActivity extends AppCompatActivity {
             }
         });
 
-        builder.create(); // No es necesario para mostrarlo, pero puede crearse para guardarlo para hacer algo antes de mostrarlo
+        builder.create();
+        // No es necesario para mostrarlo, pero puede crearse para guardarlo para hacer algo antes de mostrarlo.
         builder.show();
     }
 
@@ -94,15 +92,18 @@ public class BasicDialogsActivity extends AppCompatActivity {
         builder.show();
     }
 
+
+    String elementoSelecciondo = null; // TODO: arreglar esto
+
     public void listDialog2(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Seleccionar")
                 .setSingleChoiceItems(R.array.colors_array, -1, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        elementoSelecciondo = getResources().getStringArray(R.array.colors_array)[which];
                         Toast.makeText(BasicDialogsActivity.this,
-                                "Estás seleccionando: " +
-                                getResources().getStringArray(R.array.colors_array)[which],
+                                "Estás seleccionando: " + elementoSelecciondo,
                                 Toast.LENGTH_SHORT).show();
                     }
                 })
@@ -110,8 +111,7 @@ public class BasicDialogsActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(BasicDialogsActivity.this,
-                                "Has seleccionado: " +
-                                getResources().getStringArray(R.array.colors_array)[which],
+                                "Has seleccionado: " + elementoSelecciondo,
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
