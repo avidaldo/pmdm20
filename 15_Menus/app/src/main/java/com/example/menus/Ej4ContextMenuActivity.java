@@ -45,12 +45,15 @@ public class Ej4ContextMenuActivity extends AppCompatActivity {
 
     @Override
     public void onCreateContextMenu (ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu3, menu);
 
+        // El parámetro menuInfo contiene la posición del elemento concreto que se ha pulsado dentro de la Lista
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) menuInfo;
+        /* El Atributo position nos permite acceder al item que ocupa la posición pulsada. Accedemos al
+        String del item y lo utilizamos como cabecera del menú */
         menu.setHeaderTitle(lv_planetas.getAdapter().getItem(info.position).toString());
+
+        super.onCreateContextMenu(menu, v, menuInfo);
+        getMenuInflater().inflate(R.menu.menu3, menu);
     }
 
     @Override
