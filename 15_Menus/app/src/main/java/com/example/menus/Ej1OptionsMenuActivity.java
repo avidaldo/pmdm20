@@ -8,7 +8,7 @@ import android.view.MenuInflater;
 
 public class Ej1OptionsMenuActivity extends AppCompatActivity {
 
-    // Se define el fichero de recursos res/menu/menu1.xml
+    // Se define el fichero de recursos res/menu/menu1clase.xml
 
 
     @Override
