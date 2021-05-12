@@ -40,20 +40,29 @@ public class Ej4ContextMenuActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Elección: " + lv_planetas.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
             }
         });
+
         registerForContextMenu(lv_planetas);
+        registerForContextMenu(findViewById(R.id.textView4));
     }
 
     @Override
-    public void onCreateContextMenu (ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
 
-        // El parámetro menuInfo contiene la posición del elemento concreto que se ha pulsado dentro de la Lista
-        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) menuInfo;
+        if (v.getId()==R.id.textView4){
+            getMenuInflater().inflate(R.menu.menu2, menu);
+        }
+        else {
+
+            // El parámetro menuInfo contiene la posición del elemento concreto que se ha pulsado dentro de la Lista
+            AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) menuInfo;
         /* El Atributo position nos permite acceder al item que ocupa la posición pulsada. Accedemos al
         String del item y lo utilizamos como cabecera del menú */
-        menu.setHeaderTitle(lv_planetas.getAdapter().getItem(info.position).toString());
+            menu.setHeaderTitle(lv_planetas.getAdapter().getItem(info.position).toString());
+
+            getMenuInflater().inflate(R.menu.menu3, menu);
+        }
 
         super.onCreateContextMenu(menu, v, menuInfo);
-        getMenuInflater().inflate(R.menu.menu3, menu);
     }
 
     @Override
@@ -65,6 +74,11 @@ public class Ej4ContextMenuActivity extends AppCompatActivity {
                 return true;
             case R.id.eliminar:
                 adaptador.remove(adaptador.getItem(info.position));
+            case R.id.new_game:
+                Toast.makeText(this, "Opción: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.help:
+                Toast.makeText(this, "Pulsado ayuda", Toast.LENGTH_SHORT).show();
                 return true;
         }
         return true;
