@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fragments">
-        <activity android:name=".Ej2FragmentsDinamicosActivity"></activity>
+        <activity android:name=".Ej3FragmentsActivity"></activity>
+        <activity
+            android:name=".Ej4BasicActivity"
+            android:label="@string/title_activity_ej3_basic"
+            android:theme="@style/Theme.Fragments.NoActionBar" />
+        <activity android:name=".Ej2FragmentsDinamicosActivity" />
         <activity android:name=".Ej1FragmentsEstaticosActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

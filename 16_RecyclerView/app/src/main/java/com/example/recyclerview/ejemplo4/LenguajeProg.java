@@ -1,4 +1,4 @@
-package com.example.recyclerview;
+package com.example.recyclerview.ejemplo4;
 
 public class LenguajeProg {
 
@@ -14,16 +14,10 @@ public class LenguajeProg {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public int getIdImagen() {
         return idImagen;
     }
 
-    public void setIdImagen(int idImagen) {
-        this.idImagen = idImagen;
-    }
 
 }

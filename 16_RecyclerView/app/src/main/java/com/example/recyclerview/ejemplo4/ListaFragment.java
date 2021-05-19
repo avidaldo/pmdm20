@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.recyclerview.LenguajeProg;
 import com.example.recyclerview.R;
 import com.example.recyclerview.ejemplo3.Custom3Adapter;
 

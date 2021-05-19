@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
        startActivity(new Intent(getApplicationContext(), Ej2FragmentsDinamicosActivity.class));
     }
 
-    public void toEj3BasicActivity(View view) {
+    public void toEj3FragmentsActivity(View view) {
+        startActivity(new Intent(getApplicationContext(), Ej3FragmentsActivity.class));
+    }
+
+    public void toEj4BasicActivity(View view) {
+        startActivity(new Intent(getApplicationContext(), Ej4BasicActivity.class));
     }
 }

@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.recyclerview.LenguajeProg;
+import com.example.recyclerview.ejemplo4.LenguajeProg;
 import com.example.recyclerview.R;
 
 import java.util.ArrayList;

@@ -24,6 +24,11 @@ public class Spinner6Activity extends Activity {
 
         spinner1 = (Spinner) findViewById(R.id.spinner61);
 
+
+        /* Selecciona el primer elemento antes de setear el escuchador, evitando que este salte en
+        el momento en el que se carga de elementos */
+        spinner1.setSelection(0,false);
+
 		/* Se le asigna al primer spinner el escuchador para cuando se seleciona uno de sus elementos.
 		En este caso, se está definiendo el escuchador en otra clase */
         spinner1.setOnItemSelectedListener(new CustomOnItemSelectedListener());

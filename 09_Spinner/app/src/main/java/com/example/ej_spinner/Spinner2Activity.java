@@ -18,6 +18,10 @@ public class Spinner2Activity extends AppCompatActivity {
 
         final Spinner spinner = findViewById(R.id.spinner2);
 
+        /* Selecciona el primer elemento antes de setear el escuchador, evitando que este salte en
+        el momento en el que se carga de elementos */
+        //spinner.setSelection(0,false);
+
         /* Seteamos un escuchador para el evento de cambio de evento seleccionado
         en el spinner. */
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

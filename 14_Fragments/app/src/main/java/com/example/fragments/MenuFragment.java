@@ -9,21 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
-
-import static com.example.fragments.OnOptionMenuSelectedListener.ROJO;
 
 
-public class BlueFragment extends Fragment {
+public class MenuFragment extends Fragment {
 
     private OnOptionMenuSelectedListener mListener;
 
-    public BlueFragment() {
-    }
 
-    public static BlueFragment newInstance(String param1) {
-        BlueFragment fragment = new BlueFragment();
-        return fragment;
+    public MenuFragment() {
     }
 
     @Override
@@ -33,20 +26,30 @@ public class BlueFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_blue, container, false);
+        View view = inflater.inflate(R.layout.fragment_menu, container, false);
 
         // view es la vista del fragment que se ha creado. Podemos en ella buscar elementos.
-        Button btnmenu1 = view.findViewById(R.id.buttonBlue);
-
-        // asignamos un escuchador al botón
+        Button btnmenu1 = view.findViewById(R.id.btnmenu1);
         btnmenu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                mListener.cambiacontenedor(ROJO);
-
+                mListener.cambiacontenedor(OnOptionMenuSelectedListener.AZUL);
             }
         });
+        Button btnmenu2 = view.findViewById(R.id.btnmenu2);
+        btnmenu2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.cambiacontenedor(OnOptionMenuSelectedListener.ROJO);
+            }
+        });
+/*        Button btnmenu3 = view.findViewById(R.id.btnmenu3);
+        btnmenu3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.cambiacontenedor(OnOptionMenuSelectedListener.VERDE);
+            }
+        });*/
 
         return view;
     }
@@ -65,4 +68,6 @@ public class BlueFragment extends Fragment {
             throw new ClassCastException(activity.toString()  + " debe implementar OnOptionMenuSelectedListener");
         }
     }
+
+
 }

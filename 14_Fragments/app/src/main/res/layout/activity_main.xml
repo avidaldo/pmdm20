@@ -27,13 +27,23 @@
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejemplo 3: Basic Activity"
-        android:onClick="toEj3BasicActivity"
+        android:text="Ejemplo 3: Menú en frament"
+        android:onClick="toEj3FragmentsActivity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo 4: Basic Activity"
+        android:onClick="toEj4BasicActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
