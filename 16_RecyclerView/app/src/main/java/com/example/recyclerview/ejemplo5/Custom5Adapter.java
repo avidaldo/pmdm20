@@ -42,13 +42,13 @@ public class Custom5Adapter extends RecyclerView.Adapter<Custom5Adapter.ViewHold
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.textView.setText(listadoDatos.get(position).getNombre());
+        holder.textView.setText(listadoDatos.get(position).nombre);
         // holder.imageView.setImageResource(listadoDatos.get(position).getIdImagen());
 
         /* Utilizando la libreía externa Glide (https://bumptech.github.io/glide/) */
         Glide.with(context)
                 // Busca en internet la ruta de una imagen
-                .load(listadoDatos.get(position).getUrlImagen())
+                .load(listadoDatos.get(position).urlImagen)
                 // Indicamos una imagen local para usar mientras no se recupera la de Internet
                 .placeholder(R.drawable.generica)
                 // Indicamos la vista de destino

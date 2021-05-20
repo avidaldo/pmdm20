@@ -14,7 +14,6 @@ public class LenguajeProg {
         return nombre;
     }
 
-
     public int getIdImagen() {
         return idImagen;
     }

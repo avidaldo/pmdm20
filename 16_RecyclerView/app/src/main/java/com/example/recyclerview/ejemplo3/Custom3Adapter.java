@@ -62,7 +62,6 @@ public class Custom3Adapter extends RecyclerView.Adapter<Custom3Adapter.ViewHold
         holder.textView.setText(listadoDatos.get(position).getNombre());
         holder.imageView.setImageResource(listadoDatos.get(position).getIdImagen());
 
-
         /* Modificamos el color de cada elemento en función de su posición */
         if (position % 2 == 0) {
             holder.mView.setBackgroundColor(Color.CYAN);
