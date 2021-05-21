@@ -1,4 +1,4 @@
-package com.example.fragments;
+package com.example.fragments.comunicacion;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.fragments.R;
 
 
 public class MenuFragment extends Fragment {

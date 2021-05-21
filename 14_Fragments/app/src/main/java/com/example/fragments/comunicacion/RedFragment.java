@@ -1,4 +1,4 @@
-package com.example.fragments;
+package com.example.fragments.comunicacion;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,45 +8,31 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Toast;
 
-import static com.example.fragments.OnOptionMenuSelectedListener.ROJO;
+import com.example.fragments.R;
 
-
-public class BlueFragment extends Fragment {
+public class RedFragment extends Fragment {
 
     private OnOptionMenuSelectedListener mListener;
 
-    public BlueFragment() {
-    }
 
-    public static BlueFragment newInstance(String param1) {
-        BlueFragment fragment = new BlueFragment();
-        return fragment;
+    public RedFragment() {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_red, container, false);
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_blue, container, false);
-
-        // view es la vista del fragment que se ha creado. Podemos en ella buscar elementos.
-        Button btnmenu1 = view.findViewById(R.id.buttonBlue);
-
-        // asignamos un escuchador al botón
-        btnmenu1.setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.buttonRed).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                mListener.cambiacontenedor(ROJO);
+                mListener.cambiacontenedor(OnOptionMenuSelectedListener.AZUL);
 
             }
         });
+
+
 
         return view;
     }

@@ -1,10 +1,11 @@
-package com.example.fragments;
+package com.example.fragments.comunicacion;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
-import android.widget.Toast;
+
+import com.example.fragments.R;
 
 public class Ej3FragmentsActivity extends AppCompatActivity implements OnOptionMenuSelectedListener {
 

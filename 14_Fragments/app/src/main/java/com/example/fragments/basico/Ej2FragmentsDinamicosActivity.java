@@ -1,4 +1,4 @@
-package com.example.fragments;
+package com.example.fragments.basico;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.fragments.R;
-import com.example.fragments.RedFragment;
 
 public class Ej2FragmentsDinamicosActivity extends AppCompatActivity {
 

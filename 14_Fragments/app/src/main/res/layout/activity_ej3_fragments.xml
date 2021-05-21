@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ej3FragmentsActivity">
+    tools:context=".comunicacion.Ej3FragmentsActivity">
 
     <fragment
         android:id="@+id/menuFragment"
-        android:name="com.example.fragments.MenuFragment"
+        android:name="com.example.fragments.comunicacion.MenuFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"

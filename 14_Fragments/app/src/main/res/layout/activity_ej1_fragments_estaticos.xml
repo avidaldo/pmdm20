@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ej1FragmentsEstaticosActivity">
+    tools:context=".basico.Ej1FragmentsEstaticosActivity">
 
     <fragment
         android:id="@+id/fragment"
-        android:name="com.example.fragments.RedFragment"
+        android:name="com.example.fragments.basico.RedFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/guideline2"
@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/fragmentblue"
-        android:name="com.example.fragments.BlueFragment"
+        android:name="com.example.fragments.basico.BlueFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

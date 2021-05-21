@@ -6,6 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.fragments.basico.Ej1FragmentsEstaticosActivity;
+import com.example.fragments.basico.Ej2FragmentsDinamicosActivity;
+import com.example.fragments.comunicacion.Ej3FragmentsActivity;
+import com.example.fragments.comunicacion.Ej4BasicActivity;
+
 // https://developer.android.com/guide/fragments
 
 public class MainActivity extends AppCompatActivity {

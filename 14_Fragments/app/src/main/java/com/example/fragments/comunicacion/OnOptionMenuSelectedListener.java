@@ -1,4 +1,4 @@
-package com.example.fragments;
+package com.example.fragments.comunicacion;
 
 
 // Listener personalizado con el evento que pueda suceder en nuestro fragment

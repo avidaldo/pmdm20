@@ -1,7 +1,8 @@
-package com.example.fragments;
+package com.example.fragments.comunicacion;
 
 import android.os.Bundle;
 
+import com.example.fragments.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
